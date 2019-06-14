@@ -1,0 +1,10 @@
+pt-duplicate-key-checker
+功能介绍：
+功能为从mysql表中找出重复的索引和外键，这个工具会将重复的索引和外键都列出来，并生成了删除重复索引的语句，非常方便
+用法介绍：
+pt-duplicate-key-checker [OPTION...] [DSN]
+包含比较多的选项，具体的可以通过命令pt-duplicate-key-checker  --help来查看具体支持那些选项，我这里就不一一列举了。DNS为数据库或者表。
+使用示例：
+查看test数据库的重复索引和外键使用情况使用如下命令
+
+pt-duplicate-key-checker --host=localhost --user='root' --password='123456' --databases=test --tables=cdsb
